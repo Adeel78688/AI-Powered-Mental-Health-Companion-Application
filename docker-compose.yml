@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  chatbot:
+    build: ./emotional_support_chatbot
+    container_name: emotional_support_chatbot
+    ports:
+      - "5000:5000"
+    env_file:
+      - ./emotional_support_chatbot/.env
+    restart: always
